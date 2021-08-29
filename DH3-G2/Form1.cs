@@ -16,5 +16,21 @@ namespace DH3_G2
         {
             InitializeComponent();
         }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            ////Variables 
+            double a = Convert.ToDouble(txta.Text);
+            double b = Convert.ToDouble(txtb.Text);
+            double c = Convert.ToDouble(txtc.Text);
+            double x1, x2;
+            ///Proceso de calculo de X1 y X2
+            x1 = (-b+Math.Sqrt((Math.Pow(b,2)-(4*a*c)))) / (2 * a);
+            x2 = (-b - Math.Sqrt((Math.Pow(b, 2) - (4 * a * c)))) / (2 * a);
+            ///MOstrar resultados
+            txtX1.Text = x1.ToString();
+            txtX2.Text = x2.ToString();
+
+        }
     }
 }
